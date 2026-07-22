@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+.main {
+    background-image: url("assets/images/top_bcg.jpg");
+    background-position: center;
+    /* background-size: max(1200px, 100vw); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: max(80vh, 600px);
+    position: relative;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    background-color: black;
+}
+
+.nav {
+    display: flex;
+    margin: 0 auto;
+    max-width: 80vw;
+    justify-content: space-between;
+    height: 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.logo img {
+    width: 160px;
+}
+
+.hero {
+    font-family: "Martel Sans", sans-serif;
+    display: flex;
+    gap: 20px;
+    max-width: 70vw;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100% - 60px);
+    color: #fff;
+    position: relative;
+}
+
+.hero-title {
+    font-weight: 900;
+    /* font-size: 48px; */
+    text-align: center;
+    /* line-height: 60px; */
+    font-size: clamp(28px, 6vw, 48px);
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.hero-cta-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.mem-form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mem-form input {
+    min-width: 390px;
+    line-height: 35px;
+    background-color: rgba(0, 0, 0, 0.612);
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.mem-form button {
+    background-color: rgba(255, 0, 0, 0.871);
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 0px 35px;
+    border-radius: 6px;
+    height: 58px;
+    cursor: pointer;
+}
+
+.separator {
+    height: 6px;
+    background-color: rgba(128, 128, 128, 0.569);
+}
+
+.nav-controls {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.btn-signin {
+    color: #fff;
+    border-radius: 6px;
+    padding: 7px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: rgba(255, 0, 0, 0.871);
+    cursor: pointer;
+}
+
+
+.select-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.612);
+    border: 1px solid #ddd;
+    border-radius: 7px;
+}
+
+.lang-icon {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    object-fit: contain;
+    left: 10px;
+    pointer-events: none;
+}
+
+.custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    color: #fff;
+    padding: 7px 35px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' stroke='%23ffffff' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+}
+
+.custom-select:focus-within {
+    color: #54d7ca;
+}
+
+.content {
+    display: flex;
+    gap: 2rem;
+    height: 80vh;
+    max-width: 80vw;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.content-subtitle {
+    margin-top: 20px;
+    text-align: left;
+    font-size: clamp(16px, 2.5vw, 22px);
+}
+
+.content-title {
+    text-align: left;
+}
+
+.feature-media {
+    position: relative;
+    display: inline-block;
+}
+
+.feature-media img {
+    position: relative;
+    display: block;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+}
+
+.feature-media .video-first {
+    position: absolute;
+    z-index: 1;
+    left: 14%;
+    top: 20%;
+
+    width: 72%;
+    height: 53%;
+    object-fit: cover;
+}
+
+.feature-media .video-sec {
+    position: absolute;
+    z-index: 1;
+    left: 18%;
+    top: 8%;
+    width: 64%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.faq-box h1 {
+    margin: 30px 0px;
+}
+
+.faq-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+    background-color: rgb(50, 48, 48);
+    margin: 7px auto;
+    padding: 18px;
+    font-size: 24px;
+    line-height: normal;
+    font-weight: 400;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+}
+
+.faq-item:hover {
+    background-color: rgba(128, 128, 128, 0.69);
+}
+
+.em-line {
+    margin-top: 74px;
+}
+
+.membership {
+    margin: 25px 0 74px 0;
+    justify-content: center;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    margin: auto;
+}
+
+.footer-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.netflix-footer {
+    height: auto;
+    width: 80vw;
+    margin: 0px auto 60px auto;
+}
+
+.netflix-footer a,
+.net-in {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.netflix-footer>a {
+    display: block;
+    font-size: 16px;
+    line-height: normal;
+    margin: 28px auto 18px auto;
+}
+
+.footer-btn-parent {
+    margin: 23px auto 18px auto;
+}
+
+.net-in {
+    margin: auto;
+}
+
+@media only screen and (max-width:1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .mem-form {
+        flex-direction: column;
+    }
+
+    #sec-content {
+        flex-direction: column;
+        height: auto;
+        padding: 45px 0;
+    }
+
+    .main {
+        max-height: auto;
+        padding-bottom: 45px;
+    }
+
+    .logo img {
+        width: 130px;
+    }
+
+    .nav {
+        max-width: 95vw;
+        height: 40px;
+    }
+
+    .nav-controls {
+        gap: 15px;
+    }
+}
